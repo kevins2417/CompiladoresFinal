@@ -40,7 +40,7 @@ void recover_from_error() {
 }
 
 void parser_error(const char* expected) {
-    fprintf(stderr, "❌ Error sintáctico en línea %d, columna %d:\n", 
+    fprintf(stderr, "Error sintáctico en línea %d, columna %d:\n", 
             line_num, col_num);
     fprintf(stderr, "   Esperaba: %s\n", expected);
     fprintf(stderr, "   Encontró: '%s' (%s)\n", 
@@ -49,7 +49,7 @@ void parser_error(const char* expected) {
     error_count++;
     
     if (error_count >= max_errors) {
-        fprintf(stderr, "\n🛑 Demasiados errores (%d). Deteniendo análisis.\n", error_count);
+        fprintf(stderr, "\nDemasiados errores (%d). Deteniendo análisis.\n", error_count);
         exit(1);
     }
     
@@ -68,7 +68,7 @@ void match(int expected_token) {
 
 /* program -> PROGRAM IDENTIFIER SEMICOLON declarations compound_stmt DOT */
 void parse_program() {
-    printf("🏁 Iniciando análisis del programa...\n");
+    printf("Iniciando análisis del programa...\n");
     
     if (current_token == PROGRAM) {
         match(PROGRAM);
@@ -77,7 +77,7 @@ void parse_program() {
     }
     
     if (current_token == IDENTIFIER) {
-        printf("   📝 Programa: %s\n", yytext);
+        printf("   Programa: %s\n", yytext);
         match(IDENTIFIER);
     } else {
         parser_error("IDENTIFIER");
@@ -94,24 +94,24 @@ void parse_program() {
     
     if (current_token == DOT) {
         match(DOT);
-        printf("   ✅ Punto final encontrado\n");
+        printf("   Punto final encontrado\n");
     } else {
         parser_error(".");
     }
     
     if (current_token != EOF && error_count == 0) {
-        fprintf(stderr, "⚠️  Advertencia: Tokens adicionales después del programa\n");
+        fprintf(stderr, "Advertencia: Tokens adicionales después del programa\n");
     }
 }
 
 /* declarations -> VAR declaration_list | epsilon */
 void declarations() {
     if (current_token == VAR) {
-        printf("   📋 Procesando declaraciones VAR\n");
+        printf("   Procesando declaraciones VAR\n");
         match(VAR);
         declaration_list();
     } else {
-        printf("   📋 Sin declaraciones VAR\n");
+        printf("   Sin declaraciones VAR\n");
     }
 }
 
@@ -183,7 +183,7 @@ void type() {
 
 /* compound_stmt -> BEGIN stmt_list END */
 void compound_stmt() {
-    printf("   🔨 Procesando bloque BEGIN-END\n");
+    printf("   Procesando bloque BEGIN-END\n");
     
     if (current_token == BEGIN_KW) {
         match(BEGIN_KW);
@@ -196,7 +196,7 @@ void compound_stmt() {
     
     if (current_token == END) {
         match(END);
-        printf("   ✅ Bloque END correcto\n");
+        printf("   Bloque END correcto\n");
     } else {
         parser_error("END");
         recover_from_error();

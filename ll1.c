@@ -71,7 +71,7 @@ void init_ll1_table() {
     ll1_table[NT_EXPRESSION][LPAREN] = 1;
     ll1_table[NT_EXPRESSION][NOT] = 1;
 
-    printf("✅ Tabla LL(1) inicializada\n");
+    printf("Tabla LL(1) inicializada\n");
 }
 
 const char* get_non_terminal_name(int nt) {
@@ -94,7 +94,7 @@ const char* get_non_terminal_name(int nt) {
 }
 
 void print_ll1_table() {
-    printf("\n📊 === TABLA LL(1) ===\n\n");
+    printf("\n=== TABLA LL(1) ===\n\n");
     
     int important_tokens[] = {
         PROGRAM, VAR, BEGIN_KW, END, IF, THEN, ELSE, WHILE, DO,
@@ -131,10 +131,10 @@ void print_ll1_table() {
 }
 
 void parse_ll1() {
-    printf("🔧 === Iniciando Análisis LL(1) Predictivo ===\n");
+    printf("=== Iniciando Análisis LL(1) Predictivo ===\n");
     init_ll1_table();
     print_ll1_table();
     
-    printf("📝 Nota: Usando parser recursivo descendente con tabla LL(1) como referencia\n");
+    printf("Nota: Usando parser recursivo descendente con tabla LL(1) como referencia\n");
     parse_program();
 }

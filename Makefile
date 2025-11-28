@@ -13,7 +13,7 @@ OBJS = main.o parser.o ll1.o tokens.o lex.yy.o
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	@echo "🔨 Compilando $(TARGET)..."
+	@echo "Compilando $(TARGET)..."
 	@$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
 
 lex.yy.c: lexer.l
@@ -24,7 +24,7 @@ lex.yy.c: lexer.l
 
 # Limpiar
 clean:
-	@echo "🧹 Limpiando..."
+	@echo "Limpiando..."
 	@rm -f $(TARGET) $(OBJS) lex.yy.c
 
 # Ayuda
@@ -39,7 +39,7 @@ help:
 
 # Target dinámico para ANY archivo .mini0
 %.mini0: $(TARGET)
-	@echo "🚀 Ejecutando: ./$(TARGET) $@"
+	@echo "Ejecutando: ./$(TARGET) $@"
 	@./$(TARGET) $@
 
 .DEFAULT_GOAL := all

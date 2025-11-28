@@ -13,7 +13,7 @@ void update_position() {
 }
 
 void lex_error(const char* msg) {
-    fprintf(stderr, "❌ Error léxico en línea %d, columna %d: %s\n", 
+    fprintf(stderr, "Error léxico en línea %d, columna %d: %s\n", 
             line_num, col_num, msg);
     exit(1);
 }

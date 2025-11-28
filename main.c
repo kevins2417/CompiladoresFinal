@@ -19,19 +19,19 @@ void print_error_summary(int error_count) {
     printf("=========================================\n");
     
     if (error_count == 0) {
-        printf("✅ ANÁLISIS EXITOSO\n");
+        printf("ANÁLISIS EXITOSO\n");
         printf("   No se encontraron errores sintácticos\n");
     } else {
-        printf("❌ SE ENCONTRARON ERRORES\n");
+        printf("SE ENCONTRARON ERRORES\n");
         printf("   Total de errores reportados: %d\n", error_count);
         
         if (error_count >= 10) {
-            printf("   ⚠️  Muchos errores detectados\n");
+            printf("   Muchos errores detectados\n");
             printf("   Revise la estructura completa del programa\n");
         } else if (error_count >= 5) {
-            printf("   🔍 Varios errores - revise la sintaxis\n");
+            printf("   Varios errores - revise la sintaxis\n");
         } else {
-            printf("   🛠️  Pocos errores - fácil de corregir\n");
+            printf("   Pocos errores - fácil de corregir\n");
         }
     }
     printf("=========================================\n");
@@ -46,14 +46,14 @@ int main(int argc, char** argv) {
 
     FILE* input = fopen(argv[1], "r");
     if (!input) {
-        fprintf(stderr, "❌ Error: No se pudo abrir el archivo '%s'\n", argv[1]);
+        fprintf(stderr, "Error: No se pudo abrir el archivo '%s'\n", argv[1]);
         fprintf(stderr, "   Verifique que el archivo existe y es legible\n");
         return 1;
     }
 
     print_banner();
-    printf("📁 Archivo: %s\n", argv[1]);
-    printf("⏰ Iniciando análisis...\n");
+    printf("Archivo: %s\n", argv[1]);
+    printf("Iniciando análisis...\n");
     printf("   El parser continuará después de cada error\n");
     printf("   y reportará todos los problemas encontrados\n\n");
 
@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
     init_parser(input);
     
     // Opción: usar análisis LL(1) o recursivo descendente
-    printf("🎯 Modo: Parser Recursivo Descendente con Recuperación de Errores\n\n");
+    printf("Modo: Parser Recursivo Descendente con Recuperación de Errores\n\n");
     parse_program();
     
     clock_t end = clock();
@@ -71,15 +71,15 @@ int main(int argc, char** argv) {
     int errors = get_error_count();
     
     print_error_summary(errors);
-    printf("   ⏱️  Tiempo de análisis: %.3f segundos\n", cpu_time_used);
+    printf("   Tiempo de análisis: %.3f segundos\n", cpu_time_used);
     printf("=========================================\n\n");
 
     fclose(input);
     
     if (errors > 0) {
-        printf("💡 Sugerencia: Revise los errores arriba y corrija el código\n");
+        printf("Sugerencia: Revise los errores arriba y corrija el código\n");
     } else {
-        printf("🎉 ¡Programa sintácticamente correcto! Puede proceder a la siguiente fase\n");
+        printf("¡Programa sintácticamente correcto! Puede proceder a la siguiente fase\n");
     }
     
     return (errors == 0) ? 0 : 1;
