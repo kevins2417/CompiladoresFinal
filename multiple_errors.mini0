@@ -1,0 +1,27 @@
+program MultipleErrors;
+var
+    x, y, : integer;
+    z boolean;
+    a, b, c integer;
+begin
+    x := 5
+    y := x + ;
+    
+    if x then
+        write(x);
+    
+    while y
+        y := y - 1;
+    
+    read(, z);
+    
+    write(a + );
+    
+    if a < b then
+        c := a *
+    else
+        c := b;
+    
+    x := (a + b * ;
+    
+end.

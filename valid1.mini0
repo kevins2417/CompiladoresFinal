@@ -1,0 +1,23 @@
+program TestProgram;
+var
+    x, y: integer;
+    flag: boolean;
+begin
+    x := 10;
+    y := x + 5;
+    flag := true;
+    
+    if x < y then
+        write(x)
+    else
+        write(y);
+        
+    while x > 0 do
+    begin
+        x := x - 1;
+        write(x)
+    end;
+    
+    read(z);
+    write(z * 2)
+end.
