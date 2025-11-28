@@ -17,19 +17,19 @@
 
 | Nombre | Código | Email |
 |--------|--------|-------|
-| **[Tu Nombre Completo]** | 20XX-XXXXX | tu.email@unmsm.edu.pe |
-| **[Nombre Compañero]** | 20XX-XXXXX | companero@unmsm.edu.pe |
+| **Edwin Eduardo Ccama Pari** | 2025-777 | eccamap@ulasalle.edu.pe |
+| **Kevin Alexis Chambilla Gonzales** | 2025-666 | kchambillag@ulasalle.edu.pe |
 
 ---
 
 ## 🏛️ Información Académica
 
-- **Universidad:** Universidad Nacional Mayor de San Marcos (UNMSM)
-- **Facultad:** Facultad de Ingeniería de Sistemas e Informática
+- **Universidad:** Universidad Nacional La Salle
+- **Facultad:** Facultad de Ingeniería y Arquitectura - Ing. Software
 - **Curso:** Compiladores
-- **Profesora:** Dra. Marcela [Apellido Completo]
+- **Profesora:** Dra. Marcela Quispe Cruz
 - **Ciclo Académico:** 2025-I
-- **Fecha:** Enero 2025
+- **Fecha:** Noviembre 2025
 
 ---
 
@@ -535,20 +535,20 @@ SOFTWARE.
 
 ## 📧 Contacto
 
-- **Autor 1:** [Tu Nombre] - [tu.email@unmsm.edu.pe]
-- **Autor 2:** [Nombre Compañero] - [companero@unmsm.edu.pe]
-- **Profesora:** Dra. Marcela [Apellido] - [marcela@unmsm.edu.pe]
+- **Autor 1:** Edwin Eduardo Ccama Pari - ECcamaP@ulasalle.edu.pe
+- **Autor 2:** Kevin Alexis Chambilla Gonzales - KChambiallaG@ulasalle.edu.pe
+- **Profesora:** Dra. Marcela Quispe Cruz - MQuispeCr@ulasalle.edu.pe
 
-**Repositorio:** [https://github.com/USUARIO/parser-mini0](https://github.com/USUARIO/parser-mini0)
+**Repositorio:** https://github.com/kevins2417/CompiladoresFinal
 
 ---
 
 <div align="center">
 
-**Universidad Nacional Mayor de San Marcos** 🎓
+**Universidad La Salle**
 
-*Facultad de Ingeniería de Sistemas e Informática*
+*Facultad de Ingenierías y Arquitectura*
 
-Enero 2025
+Noviembre 2025
 
 </div>
