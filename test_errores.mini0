@@ -1,0 +1,39 @@
+program ProgramaConErrores
+var
+    x, y, : integer;
+    flag boolean;
+    z: ;
+begin
+    x := ;
+    y := x + 10
+    
+    if x > y
+        write(x);
+    
+    while y < 100
+        y := y + 1;
+    end;
+    
+    read(x, , z);
+    
+    write(;
+    
+    z := (x + y * ;
+    
+    if x < then
+        y := x
+    else
+        y := 
+    
+    x := y + * 5;
+    
+    flag := true and ;
+    
+    begin
+        x := x + 1
+        write(x)
+    
+    while x do
+        x := x - 1
+    
+end

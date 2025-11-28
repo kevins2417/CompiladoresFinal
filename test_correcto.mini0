@@ -1,0 +1,64 @@
+program CalculadoraSimple;
+var
+    numero1, numero2, resultado: integer;
+    esMayor, continuar: boolean;
+begin
+    { Programa de calculadora simple }
+    
+    write(100);
+    write(200);
+    
+    read(numero1, numero2);
+    
+    resultado := numero1 + numero2;
+    write(resultado);
+    
+    resultado := numero1 - numero2;
+    write(resultado);
+    
+    resultado := numero1 * numero2;
+    write(resultado);
+    
+    if numero2 <> 0 then
+        resultado := numero1 / numero2
+    else
+        resultado := 0;
+    
+    write(resultado);
+    
+    esMayor := numero1 > numero2;
+    
+    if esMayor then
+        write(numero1)
+    else
+        write(numero2);
+    
+    continuar := true;
+    
+    while continuar and (resultado > 0) do
+    begin
+        resultado := resultado - 1;
+        write(resultado);
+        
+        if resultado <= 5 then
+            continuar := false
+        else
+            continuar := true
+    end;
+    
+    { Operaciones booleanas }
+    esMayor := (numero1 >= numero2) and (numero2 <> 0);
+    continuar := (resultado = 0) or (esMayor);
+    esMayor := not esMayor;
+    
+    if (numero1 < 100) and (numero2 < 100) then
+    begin
+        resultado := numero1 + numero2;
+        write(resultado)
+    end
+    else
+    begin
+        resultado := numero1 * numero2;
+        write(resultado)
+    end
+end.
